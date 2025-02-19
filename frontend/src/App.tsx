@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Login } from './auth/Login';
 import { Register } from './auth/Register';
 import { Tasks } from './components/Tasks';
-import { Navbar } from './components/Navbar';
+import { Navigation } from './components/Navbar';
 
 export default function App() {
   const [token, setToken] = useState<string | null>(localStorage.getItem('token'));
@@ -21,7 +21,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-gray-100">
-        <Navbar isAuthenticated={!!token} onLogout={handleLogout} />
+        <Navigation isAuthenticated={!!token} onLogout={handleLogout} />
         <main className="container mx-auto px-4 py-8">
           <Routes>
             <Route 

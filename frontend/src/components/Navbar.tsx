@@ -1,45 +1,35 @@
 import { Link } from 'react-router-dom';
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
 
 interface NavigationProps {
   isAuthenticated: boolean;
   onLogout: () => void;
 }
 
-export function Navbar({ isAuthenticated, onLogout }: NavigationProps) {
+export function Navigation({ isAuthenticated, onLogout }: NavigationProps) {
   return (
-    <nav className="bg-white shadow">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between h-16 items-center">
-          <Link to="/" className="text-xl font-bold">
-            Task Manager
-          </Link>
-          <div className="space-x-4">
-            {isAuthenticated ? (
-              <button
-                onClick={onLogout}
-                className="text-gray-600 hover:text-gray-900"
-              >
-                Logout
-              </button>
-            ) : (
-              <>
-                <Link
-                  to="/login"
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  Login
-                </Link>
-                <Link
-                  to="/register"
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  Register
-                </Link>
-              </>
-            )}
-          </div>
-        </div>
-      </div>
-    </nav>
+    <Navbar bg="white" expand="lg" className="shadow">
+      <Container>
+        <Navbar.Brand as={Link} to="/">
+          Task Manager
+        </Navbar.Brand>
+        <Nav className="ms-auto">
+          {isAuthenticated ? (
+            <Button variant="link" onClick={onLogout} className="text-gray-600">
+              Logout
+            </Button>
+          ) : (
+            <>
+              <Nav.Link as={Link} to="/login" className="text-gray-600">
+                Login
+              </Nav.Link>
+              <Nav.Link as={Link} to="/register" className="text-gray-600">
+                Register
+              </Nav.Link>
+            </>
+          )}
+        </Nav>
+      </Container>
+    </Navbar>
   );
 }

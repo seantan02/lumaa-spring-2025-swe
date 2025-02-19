@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { comm, Task } from '../comm';
+import { Container, Form, Button, Alert, Card, Row, Col } from 'react-bootstrap';
 
 export function Tasks({ token }: { token: string }) {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -51,104 +52,92 @@ export function Tasks({ token }: { token: string }) {
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <Container className="max-w-4xl mx-auto">
       <h2 className="text-2xl font-bold mb-4">Tasks</h2>
-      {error && <div className="bg-red-100 text-red-700 p-3 rounded mb-4">{error}</div>}
+      {error && <Alert variant="danger">{error}</Alert>}
       
-      <form onSubmit={handleCreateTask} className="mb-8 space-y-4">
-        <div>
-          <label className="block mb-1">Title</label>
-          <input
+      <Form onSubmit={handleCreateTask} className="mb-8">
+        <Form.Group className="mb-3">
+          <Form.Label>Title</Form.Label>
+          <Form.Control
             type="text"
             value={newTask.title}
             onChange={(e) => setNewTask({ ...newTask, title: e.target.value })}
-            className="w-full p-2 border rounded"
             required
           />
-        </div>
-        <div>
-          <label className="block mb-1">Description</label>
-          <textarea
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Description</Form.Label>
+          <Form.Control
+            as="textarea"
             value={newTask.description}
             onChange={(e) => setNewTask({ ...newTask, description: e.target.value })}
-            className="w-full p-2 border rounded"
           />
-        </div>
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-        >
+        </Form.Group>
+        <Button variant="primary" type="submit">
           Add Task
-        </button>
-      </form>
+        </Button>
+      </Form>
 
       <div className="space-y-4">
         {tasks.map(task => (
-          <div key={task.id} className="border p-4 rounded">
-            {editingTask?.id === task.id ? (
-              <div className="space-y-4">
-                <input
-                  type="text"
-                  value={editingTask.title}
-                  onChange={(e) => setEditingTask({ ...editingTask, title: e.target.value })}
-                  className="w-full p-2 border rounded"
-                />
-                <textarea
-                  value={editingTask.description}
-                  onChange={(e) => setEditingTask({ ...editingTask, description: e.target.value })}
-                  className="w-full p-2 border rounded"
-                />
-                <div className="flex space-x-2">
-                  <button
-                    onClick={() => handleUpdateTask(editingTask)}
-                    className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-                  >
-                    Save
-                  </button>
-                  <button
-                    onClick={() => setEditingTask(null)}
-                    className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div>
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-semibold">{task.title}</h3>
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={() => setEditingTask(task)}
-                      className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={() => handleDeleteTask(task.id)}
-                      className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
-                    >
-                      Delete
-                    </button>
+          <Card key={task.id} className="mb-3">
+            <Card.Body>
+              {editingTask?.id === task.id ? (
+                <div className="space-y-4">
+                  <Form.Control
+                    type="text"
+                    value={editingTask.title}
+                    onChange={(e) => setEditingTask({ ...editingTask, title: e.target.value })}
+                    className="mb-3"
+                  />
+                  <Form.Control
+                    as="textarea"
+                    value={editingTask.description}
+                    onChange={(e) => setEditingTask({ ...editingTask, description: e.target.value })}
+                    className="mb-3"
+                  />
+                  <div className="d-flex gap-2">
+                    <Button variant="success" onClick={() => handleUpdateTask(editingTask)}>
+                      Save
+                    </Button>
+                    <Button variant="secondary" onClick={() => setEditingTask(null)}>
+                      Cancel
+                    </Button>
                   </div>
                 </div>
-                <p className="text-gray-600 mt-2">{task.description}</p>
-                <div className="mt-2">
-                  <label className="flex items-center space-x-2">
-                    <input
+              ) : (
+                <div>
+                  <Row className="align-items-center justify-content-between">
+                    <Col>
+                      <h3 className="text-xl font-semibold">{task.title}</h3>
+                    </Col>
+                    <Col xs="auto">
+                      <div className="d-flex gap-2">
+                        <Button variant="primary" onClick={() => setEditingTask(task)}>
+                          Edit
+                        </Button>
+                        <Button variant="danger" onClick={() => handleDeleteTask(task.id)}>
+                          Delete
+                        </Button>
+                      </div>
+                    </Col>
+                  </Row>
+                  <p className="text-gray-600 mt-2">{task.description}</p>
+                  <div className="mt-2">
+                    <Form.Check
                       type="checkbox"
+                      label="Complete"
                       checked={task.isComplete}
                       onChange={() => handleUpdateTask({ ...task, isComplete: !task.isComplete })}
-                      className="form-checkbox"
                     />
-                    <span>Complete</span>
-                  </label>
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </Card.Body>
+          </Card>
         ))}
       </div>
-    </div>
+    </Container>
   );
 }
