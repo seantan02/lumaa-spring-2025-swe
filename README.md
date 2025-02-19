@@ -1,12 +1,14 @@
 # Project README
 
+*Let's build Lumaa together!*
+
 ## Video Demo
 - link: https://drive.google.com/file/d/1VlDoFqvb4Um1Xb7EwXZOPtX8UttnNJiT/view?usp=sharing
 
 ## Time Spent on Development
 
 - **Backend**: 2.5 hours. The main focus was on proper TypeScript typing, integrating ORM, working with tokens, and Docker setup.
-  - *Note*: - There's no services and controllers as I kept the backend as minimal as possibles so that there's not too many folders and files to take care of, which is one of my previous mentor's value - Simplicity.
+  - *Note*: - There's no services and controllers as I kept the backend as minimal as possibles so that there's not too many folders and files to take care of, which is one of my previous mentor's values - Simplicity.
             - 4 files in total ONLY to have this running ready to go.
             - Minimal helped from AI, mostly from experience
 - **Frontend**: around 45 minutes. The main focus was on implementing Bootstrap and ensuring proper TypeScript typing.
@@ -107,4 +109,9 @@ I believe this package reflects my commitment to the company’s growth while al
 2. Company Shares: A modest allocation of company equity.
 3. Performance Bonus: A bonus structure of 1-20%, contingent on the same performance metrics, such as mentioned above.
 
-I took into account that being able to work as a founding SWE is also a "pay" to me as I know I will learn so much and grow together with you and Lumaa, thus I am flexible and open to negotiations. For example, I would be open to adjusting the base salary in exchange for additional equity or a higher bonus percentage, should the company want to offer more shares as part of my compensation.
+I am flexible and open to negotiations. For example, I am open for just bass pay, and also open to adjusting the base salary in exchange for additional equity or a higher bonus percentage, should the company want to offer more shares as part of my compensation. Let's build Lumaa together!
+
+
+## Why Me
+
+- As one who was a founding SWE prior to college, I am obsessed with being a founding SWE, let's build Lumaa together!
