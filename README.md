@@ -52,12 +52,17 @@ PORT=8000
 4. Install Makefile on your machine if not installed (Should come pre-installed for Macs and Linux)
 - for window, do:
     a. Open terminal as admin
+  
     b. run "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+  
     c. run "choco install make"
+  
     d. run "make --version" to check if it's installed
 
 5. open a terminal and make sure you are at the root folder of this project (same level as this README) and run
+
     a. make clean
+
     b. make run
 * Run them in order a then b
 
