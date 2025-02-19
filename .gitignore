@@ -1,10 +1,17 @@
-.env
-.env*
-dist
-node_modules
+# backend
+backend/dist
+backend/src/*.js
+
+# frontend
+frontend/dist
 frontend/public
 frontend/build
+
+# Global
+node_modules
 .DS_Store
+.env
+.env*
 .env.local
 .env.development.local
 .env.test.local
