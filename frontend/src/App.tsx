@@ -6,6 +6,8 @@ import { Tasks } from './components/Tasks';
 import { Navigation } from './components/Navbar';
 
 export default function App() {
+  // we use localstorage to store the token and if token is present, we consider the user as authenticated and navigate to tasks page
+
   const [token, setToken] = useState<string | null>(localStorage.getItem('token'));
 
   const handleLogin = (newToken: string) => {

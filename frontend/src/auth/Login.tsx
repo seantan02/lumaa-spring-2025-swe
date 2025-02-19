@@ -14,7 +14,7 @@ export function Login({ onLogin }: { onLogin: (token: string) => void }) {
     e.preventDefault();
     try {
       const response = await comm.login(username, password);
-      onLogin(response.token);
+      onLogin(response.token);  // update the token in localstorage
       navigate('/tasks');
     } catch (err) {
       setError('Login failed. Please check your credentials.');

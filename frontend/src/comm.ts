@@ -35,6 +35,7 @@ export const comm = {
 
   async getTasks(token: string): Promise<Task[]> {
     const response = await fetch(`${API_URL}/tasks`, {
+      method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',

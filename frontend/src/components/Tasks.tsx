@@ -4,7 +4,7 @@ import { Container, Form, Button, Alert, Card, Row, Col } from 'react-bootstrap'
 
 export function Tasks({ token }: { token: string }) {
   const [tasks, setTasks] = useState<Task[]>([]);
-  const [newTask, setNewTask] = useState({ title: '', description: '' });
+  const [newTask, setNewTask] = useState({ title: '', description: '', isComplete: false });
   const [editingTask, setEditingTask] = useState<Task | null>(null);
   const [error, setError] = useState('');
 
@@ -24,8 +24,8 @@ export function Tasks({ token }: { token: string }) {
   const handleCreateTask = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await comm.createTask(token, { ...newTask, isComplete: false });
-      setNewTask({ title: '', description: '' });
+      await comm.createTask(token, { ...newTask });
+      setNewTask({ title: '', description: '', isComplete: false});
       fetchTasks();
     } catch (err) {
       setError('Failed to create task');
@@ -56,7 +56,7 @@ export function Tasks({ token }: { token: string }) {
       <h2 className="text-2xl font-bold mb-4">Tasks</h2>
       {error && <Alert variant="danger">{error}</Alert>}
       
-      <Form onSubmit={handleCreateTask} className="mb-8">
+      <Form onSubmit={handleCreateTask} className="mb-2 pb-2">
         <Form.Group className="mb-3">
           <Form.Label>Title</Form.Label>
           <Form.Control
@@ -73,6 +73,17 @@ export function Tasks({ token }: { token: string }) {
             value={newTask.description}
             onChange={(e) => setNewTask({ ...newTask, description: e.target.value })}
           />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Completed?</Form.Label>
+          <Form.Control
+            as="select"
+            value={newTask.isComplete.toString()}
+            onChange={(e) => setNewTask({ ...newTask, isComplete: e.target.value === 'true' })}
+          >
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+          </Form.Control>
         </Form.Group>
         <Button variant="primary" type="submit">
           Add Task

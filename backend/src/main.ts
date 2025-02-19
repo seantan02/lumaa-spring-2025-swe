@@ -1,4 +1,5 @@
 import express from "express";
+import cors from 'cors';
 import { Request, Response, NextFunction } from "express";
 import { initializeDatabase, AppDataSource  } from "./db";
 import { User, Task } from "./models";
@@ -76,6 +77,7 @@ initializeDatabase(AppDataSource).catch((error) => {
 
 // create and setup express app
 const app = express();
+app.use(cors());  // enable cors
 app.use(express.json());
 
 // create router
@@ -134,7 +136,7 @@ router.post('/auth/login', validateRequest(authSchema), async (req: Request, res
 
 // tasks
 
-router.get('/tasks', verifyToken, validateRequest(taskSchema), async (req: AuthRequest, res: Response) => {
+router.get('/tasks', verifyToken, async (req: AuthRequest, res: Response) => {
     try {
         const user = await AppDataSource.getRepository(User).findOneOrFail({
             where: { id: req.userId },
@@ -207,7 +209,7 @@ router.put('/tasks/:id', verifyToken, validateRequest(taskSchema), async (req: A
     }
 });
 
-router.delete('/tasks/:id', verifyToken, validateRequest(taskSchema), async (req: AuthRequest, res: Response) => {
+router.delete('/tasks/:id', verifyToken, async (req: AuthRequest, res: Response) => {
     try {
         const taskId = parseInt(req.params.id);
         const task = await AppDataSource.getRepository(Task).findOneOrFail({
@@ -232,6 +234,11 @@ router.delete('/tasks/:id', verifyToken, validateRequest(taskSchema), async (req
 
 // Mount the router - THIS IS THE CRUCIAL PART YOU WERE MISSING
 app.use('', router);
+
+// We treat every other routes as 404 - simplicity
+app.use((req, res) => {
+    res.status(404).send('404 - Not Found');
+});
 
 // start express server
 console.log(`Server started at http://localhost:${appPort}`);
