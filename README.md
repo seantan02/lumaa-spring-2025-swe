@@ -87,16 +87,24 @@ PORT=8000
 
 - I have done all of them personally in my experience as Student Software Developer, or as Software Performance Engineer Intern at SKYGEN USA LLC
 - More improvements:
-    a. Implement logging (at least one logger)
-    b. Add API documentation
-    c. Implement rate limiting
-    d. Add refresh tokens
-    e. Add security headers
-    f. Implement request sanitization
-    g. Create service layer
-    h. Add request/response DTOs
-    i. Implement proper error handling middleware
 
+    a. Implement logging (at least one logger)
+
+    b. Add API documentation
+
+    c. Implement rate limiting
+  
+    d. Add refresh tokens
+  
+    e. Add security headers
+  
+    f. Implement request sanitization
+  
+    g. Create service layer
+  
+    h. Add request/response DTOs
+  
+    i. Implement proper error handling middleware
 
 ## Salary and Compensation Proposal
 
