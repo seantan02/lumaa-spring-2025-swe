@@ -6,6 +6,8 @@
 ## Time Spent on Development
 
 - **Backend**: 2.5 hours. The main focus was on proper TypeScript typing, integrating ORM, working with tokens, and Docker setup.
+  - *Note*: - There's no services and controllers as I kept the backend as minimal as possibles so that there's not too many folders and files to take care of, which is one of my previous mentor's value - Simplicity.
+            - 4 files in total ONLY to have this running ready to go.
 - **Frontend**: 1 hour. The main focus was on implementing Bootstrap and ensuring proper TypeScript typing.
 
 ## Setup Instructions
