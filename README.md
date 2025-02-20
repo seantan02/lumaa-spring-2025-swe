@@ -107,11 +107,12 @@ PORT=8000
     i. Implement proper error handling middleware
 
 ## Salary and Compensation Proposal
+- I am truly excited about the opportunity to join Lumaa and contribute to its growth journey. My primary motivation is to be part of an innovative team where I can both contribute meaningfully and continue to grow professionally.
 
 ### 1. In-office or Hybrid Role (San Francisco)
-- I am open to relocating to San Francisco without assistance and understand the higher cost of living in the area. As such, I propose the following compensation package:
+- I am open to relocating to San Francisco without assistance and understand the higher cost of living in the area. As such, I propose the following compensation:
 
-1. Base Salary: $45/hour (reflecting the lower end of the pay scale for SF to accommodate the cost of living)
+1. Base Salary: $77500/year (reflecting the lower end of the pay scale for SF to accommodate the cost of living)
 2. Company Shares: A reasonable amount of equity based on company standards and the role’s contribution potential.
 3. Performance Bonus: A bonus structure ranging from 10-20%, based on measurable outcomes such as:
     - Progress in software development and feature delivery.
@@ -123,11 +124,13 @@ I believe this package reflects my commitment to the company’s growth while al
 ### 2. Remote Role (If Applicable)
 - If the role is remote, I am happy to collaborate through tools such as Zoom and other online communication platforms. For remote work, I would propose the following compensation package:
 
-1. Base Salary: $37.5/hour (to reflect the savings from working remotely while still offering competitive compensation).
+1. Base Salary: $65000/year (to reflect the savings from working remotely while still offering competitive compensation).
 2. Company Shares: A modest allocation of company equity.
 3. Performance Bonus: A bonus structure of 1-20%, contingent on the same performance metrics, such as mentioned above.
 
-I am flexible and open to negotiations. For example, I am open for just bass pay, and also open to adjusting the base salary in exchange for additional equity or a higher bonus percentage, should the company want to offer more shares as part of my compensation. Let's build Lumaa together!
+What excites me most about Lumaa is the opportunity to be part of building something impactful. I'm very flexible on the compensation structure and am open to adjusting any of these elements. My priority is joining a team where I can learn, grow, and make meaningful contributions to Lumaa's success.
+
+I would welcome the chance to discuss how I can best add value to the team and align my compensation with the company's current stage and needs. **Let's build Lumaa together!**
 
 
 ## Why Me
