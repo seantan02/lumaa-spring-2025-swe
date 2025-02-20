@@ -107,7 +107,7 @@ PORT=8000
     i. Implement proper error handling middleware
 
 ## Salary and Compensation Proposal
-- I am truly excited about the opportunity to join Lumaa and contribute to its growth journey. My primary motivation is to be part of an innovative team where I can both contribute meaningfully and continue to grow professionally.
+- I am truly excited about the opportunity to join Lumaa and contribute to its growth journey. My primary motivation is to be part of an innovative team where I can both contribute meaningfully and continue to grow professionally. **Let's build Lumaa together!**
 
 ### 1. In-office or Hybrid Role (San Francisco)
 - I am open to relocating to San Francisco without assistance and understand the higher cost of living in the area. As such, I propose the following compensation:
@@ -130,7 +130,7 @@ I believe this package reflects my commitment to the company’s growth while al
 
 What excites me most about Lumaa is the opportunity to be part of building something impactful. I'm very flexible on the compensation structure and am open to adjusting any of these elements. My priority is joining a team where I can learn, grow, and make meaningful contributions to Lumaa's success.
 
-I would welcome the chance to discuss how I can best add value to the team and align my compensation with the company's current stage and needs. **Let's build Lumaa together!**
+I would welcome the chance to discuss how I can best add value to the team and align my compensation with the company's current stage and needs.
 
 
 ## Why Me
