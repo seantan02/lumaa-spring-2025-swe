@@ -112,7 +112,7 @@ PORT=8000
 ### 1. In-office or Hybrid Role (San Francisco)
 - I am open to relocating to San Francisco without assistance and understand the higher cost of living in the area. As such, I propose the following compensation:
 
-1. Base Salary: $77500/year (reflecting the lower end of the pay scale for SF to accommodate the cost of living)
+1. Base Salary: $37.5/hour (reflecting the lower end of the pay scale for SF to accommodate the cost of living)
 2. Company Shares: A reasonable amount of equity based on company standards and the role’s contribution potential.
 3. Performance Bonus: A bonus structure ranging from 10-20%, based on measurable outcomes such as:
     - Progress in software development and feature delivery.
@@ -124,7 +124,7 @@ I believe this package reflects my commitment to the company’s growth while al
 ### 2. Remote Role (If Applicable)
 - If the role is remote, I am happy to collaborate through tools such as Zoom and other online communication platforms. For remote work, I would propose the following compensation package:
 
-1. Base Salary: $65000/year (to reflect the savings from working remotely while still offering competitive compensation).
+1. Base Salary: $27.5/hour (to reflect the savings from working remotely while still offering competitive compensation).
 2. Company Shares: A modest allocation of company equity.
 3. Performance Bonus: A bonus structure of 1-20%, contingent on the same performance metrics, such as mentioned above.
 
